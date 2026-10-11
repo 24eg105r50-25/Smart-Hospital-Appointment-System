@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Doctors</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f5f9;
+        }
+
+        header {
+            background: #087f8c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .doctors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        .card h3 {
+            color: #087f8c;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #087f8c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .button:hover {
+            background: #055e68;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏥 Our Doctors</h1>
+    <p>Find the right doctor for your healthcare needs.</p>
+</header>
+
+<div class="container">
+
+    <h2>Available Doctors</h2>
+
+    <div class="doctors">
+
+        <div class="card">
+            <h3>Dr. Ravi Kumar</h3>
+            <p>Department: Cardiology</p>
+            <p>Status: Available</p>
+            <a class="button" href="/appointments">Book Appointment</a>
+        </div>
+
+        <div class="card">
+            <h3>Dr. Priya Sharma</h3>
+            <p>Department: Dermatology</p>
+            <p>Status: Available</p>
+            <a class="button" href="/appointments">Book Appointment</a>
+        </div>
+
+        <div class="card">
+            <h3>Dr. Arun Kumar</h3>
+            <p>Department: Orthopedics</p>
+            <p>Status: Available</p>
+            <a class="button" href="/appointments">Book Appointment</a>
+        </div>
+
+    </div>
+
+    <a class="button" href="/dashboard">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

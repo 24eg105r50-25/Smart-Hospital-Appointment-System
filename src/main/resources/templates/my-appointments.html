@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Appointments</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f5f9;
+        }
+
+        header {
+            background: #087f8c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        h2, h3 {
+            color: #087f8c;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 14px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #087f8c;
+            color: white;
+        }
+
+        .status {
+            color: #b77900;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #087f8c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .note {
+            color: #666;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏥 My Appointments</h1>
+    <p>View your hospital appointment details</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Appointment History</h2>
+        <p>Check your appointment information below.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>T001</td>
+                    <td>Dr. Ravi Kumar</td>
+                    <td>Sample Date</td>
+                    <td>09:00 AM</td>
+                    <td class="status">Waiting</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="note">
+            This is sample information. Real appointment records will be
+            displayed after we connect the database.
+        </p>
+    </div>
+
+    <a class="button" href="/dashboard">Back to Dashboard</a>
+
+    <a class="button" href="/appointments">Book New Appointment</a>
+
+</div>
+
+</body>
+</html>
