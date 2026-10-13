@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard - Smart Hospital</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Smart Hospital</h1>
+        <p>Please select your portal:</p>
+        <div class="menu">
+            <a th:href="@{/patient/dashboard}">Patient Portal</a>
+            <a th:href="@{/doctor/dashboard}">Doctor Portal</a>
+            <a th:href="@{/admin/dashboard}">Admin Portal</a>
+        </div>
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>

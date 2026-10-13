@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Dashboard</h1>
+        <h3>Your Appointments</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient</th>
+                    <th>Time</th>
+                    <th>Reason</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="app : ${appointments}">
+                    <td th:text="${app.patient.user.username}"></td>
+                    <td th:text="${app.appointmentTime}"></td>
+                    <td th:text="${app.reason}"></td>
+                    <td>
+                        <form th:action="@{'/doctor/complete/' + ${app.id}}" method="post">
+                            <button type="submit">Complete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/dashboard}">Back to Main Dashboard</a>
+    </div>
+</body>
+</html>
