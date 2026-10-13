@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Hospital Queue</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f5f9;
+        }
+
+        header {
+            background: #087f8c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        .card h3 {
+            color: #087f8c;
+        }
+
+        .number {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            background: white;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 14px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #087f8c;
+            color: white;
+        }
+
+        .status {
+            color: #b77900;
+            font-weight: bold;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: #087f8c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎫 Smart Hospital Live Queue</h1>
+    <p>Track your appointment queue</p>
+</header>
+
+<div class="container">
+
+    <h2>Queue Dashboard</h2>
+
+    <div class="summary">
+
+        <div class="card">
+            <h3>Your Token</h3>
+            <p class="number">T005</p>
+        </div>
+
+        <div class="card">
+            <h3>Now Consulting</h3>
+            <p class="number">T003</p>
+        </div>
+
+        <div class="card">
+            <h3>Patients Ahead</h3>
+            <p class="number">1</p>
+        </div>
+
+        <div class="card">
+            <h3>Estimated Wait</h3>
+            <p class="number">20 min</p>
+        </div>
+
+    </div>
+
+    <h2>Today's Queue</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Token</th>
+                <th>Patient</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>T003</td>
+                <td>Patient A</td>
+                <td>Consulting</td>
+            </tr>
+
+            <tr>
+                <td>T004</td>
+                <td>Patient B</td>
+                <td class="status">Waiting</td>
+            </tr>
+
+            <tr>
+                <td>T005</td>
+                <td>Patient C</td>
+                <td class="status">Waiting</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><small>Demo information only. Queue data is not connected to the database yet.</small></p>
+
+    <a class="back" href="/dashboard">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

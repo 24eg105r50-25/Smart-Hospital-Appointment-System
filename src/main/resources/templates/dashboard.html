@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f5f9;
+        }
+
+        header {
+            background: #087f8c;
+            color: white;
+            padding: 22px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        .card h3 {
+            color: #087f8c;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #087f8c;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .card a:hover {
+            background: #055e68;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏥 Smart Hospital Appointment System</h1>
+    <p>Your health, our priority!</p>
+</header>
+
+<div class="container">
+
+    <h2>Welcome to Your Dashboard</h2>
+    <p>Book appointments and track your hospital queue.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>👨‍⚕️ Doctors</h3>
+            <p>Explore available doctors.</p>
+            <a href="/doctors">View Doctors</a>
+        </div>
+
+        <div class="card">
+            <h3>📅 Appointments</h3>
+            <p>Book your hospital appointment.</p>
+            <a href="/appointments">Book Appointment</a>
+        </div>
+
+        <div class="card">
+            <h3>🎫 Live Queue</h3>
+            <p>Check your token and waiting status.</p>
+            <a href="/queue">View Queue</a>
+        </div>
+
+        <div class="card">
+            <h3>📋 My Appointments</h3>
+            <p>View your appointment details.</p>
+            <a href="/my-appointments">View Appointments</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
